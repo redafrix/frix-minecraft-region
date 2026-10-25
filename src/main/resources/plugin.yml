@@ -1,0 +1,13 @@
+name: FrixRegionExample
+version: '0.1.0'
+main: fr.frixstudio.RegionPlugin
+api-version: '1.21'
+description: Synthetic portfolio example of a private bounded region entry notice.
+author: Frix Studio
+commands:
+  frixregion:
+    description: Check or reload the example region.
+    permission: frixregion.admin
+permissions:
+  frixregion.admin:
+    default: op

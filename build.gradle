@@ -1,0 +1,18 @@
+plugins { id 'java' }
+group = 'fr.frixstudio'
+version = '0.1.0'
+repositories {
+    mavenCentral()
+    maven { url = uri('https://repo.papermc.io/repository/maven-public/') }
+}
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT'
+    testImplementation 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT'
+    testImplementation 'org.mockbukkit.mockbukkit:mockbukkit-v1.21:4.116.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter:6.0.3'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:6.0.3'
+}
+tasks.withType(JavaCompile).configureEach { options.release = 21; options.encoding = 'UTF-8' }
+test { useJUnitPlatform() }
+jar { archiveBaseName = 'frix-region-example' }

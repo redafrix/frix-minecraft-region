@@ -1,0 +1,6 @@
+world: world
+min-x: -5
+max-x: 5
+min-z: -5
+max-z: 5
+message: 'You entered the Frix Studio example region. This is a portfolio demo.'
